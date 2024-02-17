@@ -30,5 +30,9 @@ public class EmployeeDirectory {
         }
         return null;
     }
+
+    public Employee findEmployeeById(int employeeId) {
+        return employees.stream().filter(e -> e.getEmployeeId() == employeeId).findFirst().orElse(null);
+    }
 }
 

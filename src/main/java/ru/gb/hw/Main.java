@@ -21,13 +21,19 @@ public class Main {
 
         System.out.println("Поиск номера телефона по иммени: Ivan");
         System.out.println(directory.findPhoneNumberByName("Ivan"));
+        System.out.println();
+
+        System.out.println("Поиск работника по табельному номеру:");
+        printEmployer(directory.findEmployeeById(1001));
 
     }
     public static void printEmployer(Employee employee){
-        System.out.println("Табельный номер: " + employee.getEmployeeId());
-        System.out.println("Имя: " + employee.getName());
-        System.out.println("Номер телефона: " + employee.getPhoneNumber());
-        System.out.println("Стаж: " + employee.getExperience());
-        System.out.println();
+        if(employee != null) {
+            System.out.println("Табельный номер: " + employee.getEmployeeId());
+            System.out.println("Имя: " + employee.getName());
+            System.out.println("Номер телефона: " + employee.getPhoneNumber());
+            System.out.println("Стаж: " + employee.getExperience());
+            System.out.println();
+        }
     }
 }
