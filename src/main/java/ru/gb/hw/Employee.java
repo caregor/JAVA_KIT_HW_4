@@ -1,18 +1,18 @@
 package ru.gb.hw;
 
 public class Employee {
+    private static int nextId = 1000;
     private int employeeId;
     private String phoneNumber;
     private String name;
     private int experience;
 
-    public Employee(int employeeId, String phoneNumber, String name, int experience) {
-        this.employeeId = employeeId;
+    public Employee(String phoneNumber, String name, int experience) {
+        this.employeeId = nextId++;
         this.phoneNumber = phoneNumber;
         this.name = name;
         this.experience = experience;
     }
-
     public int getEmployeeId() {
         return employeeId;
     }
