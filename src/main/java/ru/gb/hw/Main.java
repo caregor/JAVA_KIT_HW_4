@@ -16,12 +16,18 @@ public class Main {
 
         System.out.println("Список всех сотрудников со стажем 46 месяцев:");
         for (Employee employee : directory.findEmployeesByExperience(46)) {
-            System.out.println("Табельный номер: " + employee.getEmployeeId());
-            System.out.println("Имя: " + employee.getName());
-            System.out.println("Номер телефона: " + employee.getPhoneNumber());
-            System.out.println("Стаж: " + employee.getExperience());
-            System.out.println();
+            printEmployer(employee);
         }
 
+        System.out.println("Поиск номера телефона по иммени: Ivan");
+        System.out.println(directory.findPhoneNumberByName("Ivan"));
+
+    }
+    public static void printEmployer(Employee employee){
+        System.out.println("Табельный номер: " + employee.getEmployeeId());
+        System.out.println("Имя: " + employee.getName());
+        System.out.println("Номер телефона: " + employee.getPhoneNumber());
+        System.out.println("Стаж: " + employee.getExperience());
+        System.out.println();
     }
 }
